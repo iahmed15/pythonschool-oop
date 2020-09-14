@@ -1,3 +1,6 @@
+import random
+
+
 class Crop:
     """A generic food crop"""
 
@@ -30,14 +33,13 @@ class Crop:
         elif self._growth > 10:
             self._status = 'Mature'
         elif self._growth > 5:
-            self._sattus = 'Young'
+            self._status = 'Young'
         elif self._growth > 0:
-            self._growth = 'Seedling'
+            self._status = 'Seedling'
         elif self._growth == 0:
             self._status = 'Seed'
 
-    def grow(
-        self, light, water):
+    def grow(self, light, water):
         if light >= self._light_need and water >= self._water_need:
             self._growth += self._growth_rate
             
@@ -48,11 +50,19 @@ class Crop:
         self._update_status()
 
 
+def auto_grow(crop, days):
+    # Grow the crop
+    for day in range(days):
+        light = random.randint(1,10)
+        water = random.randint(1, 10)
+        crop.grow(light, water)
+
+
 def main():
     new_crop = Crop(1,4,3)
     print(new_crop.needs())
     print(new_crop.report())
-    new_crop.grow(4, 4)
+    auto_grow(new_crop, 30)
     print(new_crop.report())
 
 
