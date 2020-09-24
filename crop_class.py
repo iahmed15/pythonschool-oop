@@ -42,7 +42,7 @@ class Crop:
     def grow(self, light, water):
         if light >= self._light_need and water >= self._water_need:
             self._growth += self._growth_rate
-            
+
         # Increment days growing
         self._days_growing += 1
 
@@ -58,11 +58,42 @@ def auto_grow(crop, days):
         crop.grow(light, water)
 
 
+def manual_grow(crop):
+    # Get the light and water values from the user
+    valid = False
+    while not valid:
+        try:
+            light = int(input('Please enter a light value (1-10):\n> '))
+            if 1 <= light <= 10:
+                valid = True
+            else:
+                print('Value entered not valid - pleas enter a value between 1'
+                      + ' and 10')
+        except ValueError:
+            print("Value entered not valid - please enter a value between 1" +
+                  " and 10")
+
+    valid = False
+    while not valid:
+        try:
+            water = int(input('Please enter a water value (1-10):\n> '))
+            if 1 <= water <= 10:
+                valid = True
+            else:
+                print('Value entered not valid - pleas enter a value between 1'
+                      + ' and 10')
+        except ValueError:
+            print("Value entered not valid - please enter a value between 1" +
+                  " and 10")
+
+    # Grow the crop
+    crop.grow(light, water)
+
 def main():
     new_crop = Crop(1,4,3)
     print(new_crop.needs())
     print(new_crop.report())
-    auto_grow(new_crop, 30)
+    manual_grow(new_crop)
     print(new_crop.report())
 
 
