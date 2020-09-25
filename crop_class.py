@@ -2,11 +2,25 @@ import random
 
 
 class Crop:
-    """A generic food crop"""
 
     # Constructor
     def __init__(self, growth_rate, light_need, water_need):
-        # Set the attributes with an initial value
+        """Represents the most generic characteristics of a food crop, namely
+        growth needs of the crop and the _status
+
+        Args:
+            growth_rate (int): the amount the crop is 'grown' by
+            light_need (int): the required light intensity needed for the crop
+                              to grow
+            water_need (int): the required amount of water needed for the crop 
+                              to grow
+
+        Attributes:
+            _growth (int): the numerical status of the crop's growth
+            _days_growing (int): the number of days the crop has spent growing
+            _status (str): the qualitative status of the crop's growth
+            _type (str): the variety of crop
+        """
 
         self._growth = 0
         self._days_growing = 0
@@ -17,17 +31,26 @@ class Crop:
         self._type = 'Generic'
 
     def needs(self):
-        # Return a dictionary containing the light and water needs
+        """Display the amount of light and water that the crop requires to grow
+
+        Returns:
+            A dictionary containing the light and water needs
+        """
         return {'light need': self._light_need, 'water need': self._water_need}
 
     # Method to provide information about the current state of the crop
     def report(self):
-        # Return a dictionary containing the type, status, growth and days
-        # growing
+        """Provides an overview of the current state of the crop
+
+        Returns:
+            A dictionary containing the type, status, growth and days growing
+        """
         return {'type': self._type, 'status': self._status,
                 'growth': self._growth, 'days_growing': self._days_growing}
 
     def _update_status(self):
+        """Provides a way to change the status attribute to an appropriate value
+        depending on the current amount of growth"""
         if self._growth > 15:
             self._status = 'Old'
         elif self._growth > 10:
@@ -40,6 +63,7 @@ class Crop:
             self._status = 'Seed'
 
     def grow(self, light, water):
+        """Responsible for actually growing the crop"""
         if light >= self._light_need and water >= self._water_need:
             self._growth += self._growth_rate
 
@@ -51,7 +75,15 @@ class Crop:
 
 
 def auto_grow(crop, days):
-    # Grow the crop
+    """Provides a way to test the crop over a long period of time and to test
+    the functionality of the class
+
+    Args:
+        crop (class): the instance of the crop class we want to test the
+                      growth of
+        days (int): the number of days we want to automatically grow the crop
+                    for
+    """
     for day in range(days):
         light = random.randint(1,10)
         water = random.randint(1, 10)
@@ -59,7 +91,12 @@ def auto_grow(crop, days):
 
 
 def manual_grow(crop):
-    # Get the light and water values from the user
+    """Allows us to provide specific values to grow the crop over a single day
+
+    Args:
+        crop (class): the instance of the crop class we want to test the
+                      growth of
+    """
     valid = False
     while not valid:
         try:
