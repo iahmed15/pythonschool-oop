@@ -128,6 +128,8 @@ def manual_grow(crop):
 
 
 def display_menu():
+    """Shows numerous menu options to the user"""
+
     print("1. Grow manually over 1 day")
     print("2. Grow automatically over 30 days")
     print("3. Report status")
@@ -137,6 +139,9 @@ def display_menu():
 
 
 def get_menu_choice():
+    """Retrives the menu option which the user wants to use
+
+    Returns: the choice of menu option the user picked"""
     option_valid = False
     while not option_valid:
         try:
@@ -151,6 +156,8 @@ def get_menu_choice():
 
 
 def manage_crop(crop):
+    """Iterates over the menu options that the user can pick and also gives
+    them the functionality to exit the crop management program"""
     print("This is the crop management program")
     print()
     no_exit = True
