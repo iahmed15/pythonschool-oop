@@ -80,7 +80,7 @@ def auto_grow(crop, days):
     the functionality of the class
 
     Args:
-        crop (class): the instance of the crop class we want to test the
+        crop (object): the instance of the crop class we want to test the
                       growth of
         days (int): the number of days we want to automatically grow the crop
                     for
@@ -95,7 +95,7 @@ def manual_grow(crop):
     """Allows us to provide specific values to grow the crop over a single day
 
     Args:
-        crop (class): the instance of the crop class we want to test the
+        crop (object): the instance of the crop class we want to test the
                       growth of
     """
     valid = False
