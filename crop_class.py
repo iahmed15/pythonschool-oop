@@ -142,7 +142,8 @@ def display_menu():
 def get_menu_choice():
     """Retrives the menu option which the user wants to use
 
-    Returns: the choice of menu option the user picked"""
+    Returns:
+        the choice of menu option the user picked"""
     option_valid = False
     while not option_valid:
         try:
