@@ -2,7 +2,8 @@ import random
 
 
 class Crop:
-
+    """A generic food crop"""
+    
     # Constructor
     def __init__(self, growth_rate, light_need, water_need):
         """Represents the most generic characteristics of a food crop, namely
@@ -19,7 +20,7 @@ class Crop:
             _growth (int): the numerical status of the crop's growth
             _days_growing (int): the number of days the crop has spent growing
             _status (str): the qualitative status of the crop's growth
-            _type (str): the variety of crop
+            _type (str): the variety of the crop
         """
 
         self._growth = 0
