@@ -12,9 +12,32 @@
 
 * wheat_class module
 
-  
 
-[TOC]
+- [pythonschool.net Crop Simulation](#pythonschoolnet-crop-simulation)
+- [crop_class.py](#crop-classpy)
+    + [class crop_class.Crop(growth_rate, light_need, water_need)](#class-crop-classcrop-growth-rate--light-need--water-need-)
+      - [\__init__(growth_rate, light_need, water_need)](#---init---growth-rate--light-need--water-need-)
+      - [grow(light, water)](#grow-light--water-)
+      - [needs()](#needs--)
+      - [report()](#report--)
+    + [crop_class.auto_grow(crop, days)](#crop-classauto-grow-crop--days-)
+    + [crop_class.display_menu()](#crop-classdisplay-menu--)
+    + [crop_class.get_menu_choice()](#crop-classget-menu-choice--)
+    + [crop_class.manage_crop(crop)](#crop-classmanage-crop-crop-)
+    + [crop_class.manual_grow(crop)](#crop-classmanual-grow-crop-)
+- [potato_class.py](#potato-classpy)
+    + [class potato_class.Potato()](#class-potato-classpotato--)
+      - [\__init__()](#---init----)
+      - [grow(light, water)](#grow-light--water--1)
+- [wheat_class.py](#wheat-classpy)
+    + [class wheat_class.Wheat()](#class-wheat-classwheat--)
+      - [\__init__()](#---init-----1)
+      - [grow(light, water)](#grow-light--water--2)
+- [crops.py](#cropspy)
+    + [crops.create_crop()](#cropscreate-crop--)
+    + [crops.display_menu()](#cropsdisplay-menu--)
+    + [crops.select_option()](#cropsselect-option--)
+
 
 # crop_class.py
 
@@ -117,12 +140,12 @@ Represents a potato crop
 
 Args:
 
-    Inherited from parent class Crop (growth_rate, light_need,
-    water_need)
+    Inherited from parent class Crop (growth_rate, light_need, water_need)
 
 Attributes:
 
     _type (str): the variety of the crop
+    
     Inherited from parent class Crop (_growth, _days_growing, _status)
 
 
@@ -144,12 +167,12 @@ Represents a wheat crop
 
 Args:
 
-    Inherited from parent class Crop (growth_rate, light_need,
-    water_need)
+    Inherited from parent class Crop (growth_rate, light_need, water_need)
 
 Attributes:
 
     _type (str): the variety of the crop
+
     Inherited from parent class Crop (_growth, _days_growing, _status)
 
 
