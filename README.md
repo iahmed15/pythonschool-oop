@@ -28,14 +28,21 @@ Represents the most generic characteristics of a food crop, namely
 growth needs of the crop and the _status
 
 Args:
+
     growth_rate (int): the amount the crop is ‘grown’ by
+	
     light_need (int): the required light intensity needed for the crop to grow
+	
     water_need (int): the required amount of water needed for the crop  to grow
 
 Attributes:
+
     _growth (int): the numerical status of the crop’s growth
+	
     _days_growing (int): the number of days the crop has spent growing
+	
     _status (str): the qualitative status of the crop’s growth
+	
     _type (str): the variety of the crop
 
 
@@ -47,6 +54,7 @@ Responsible for actually growing the crop
 Display the amount of light and water that the crop requires to grow
 
 Returns:
+
     A dictionary containing the light and water needs
 
 
@@ -54,6 +62,7 @@ Returns:
 Provides an overview of the current state of the crop
 
 Returns:
+
     A dictionary containing the type, status, growth and days growing
 
 
@@ -62,7 +71,9 @@ Provides a way to test the crop over a long period of time and to test
 the functionality of the class
 
 Args:
+
     crop (object): the instance of the crop class we want to test the growth of
+	
     days (int): the number of days we want to automatically grow the crop for
 
 
@@ -74,6 +85,7 @@ Shows numerous menu options to the user
 Retrives the menu option which the user wants to use
 
 Returns:
+
     the choice of menu option the user picked
 
 
@@ -86,4 +98,5 @@ them the functionality to exit the crop management program
 Allows us to provide specific values to grow the crop over a single day
 
 Args:
+
     crop (object): the instance of the crop class we want to test the growth of
