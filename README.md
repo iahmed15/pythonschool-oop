@@ -12,9 +12,11 @@
 
 * wheat_class module
 
+  
 
+[TOC]
 
-# crop_class module
+# crop_class.py
 
 
 ### class crop_class.Crop(growth_rate, light_need, water_need)
@@ -30,19 +32,19 @@ growth needs of the crop and the _status
 Args:
 
     growth_rate (int): the amount the crop is ‘grown’ by
-	
+    
     light_need (int): the required light intensity needed for the crop to grow
-	
+    
     water_need (int): the required amount of water needed for the crop  to grow
 
 Attributes:
 
     _growth (int): the numerical status of the crop’s growth
-	
+    
     _days_growing (int): the number of days the crop has spent growing
-	
+    
     _status (str): the qualitative status of the crop’s growth
-	
+    
     _type (str): the variety of the crop
 
 
@@ -73,7 +75,7 @@ the functionality of the class
 Args:
 
     crop (object): the instance of the crop class we want to test the growth of
-	
+    
     days (int): the number of days we want to automatically grow the crop for
 
 
@@ -100,3 +102,79 @@ Allows us to provide specific values to grow the crop over a single day
 Args:
 
     crop (object): the instance of the crop class we want to test the growth of
+
+# potato_class.py
+
+
+### class potato_class.Potato()
+Bases: `crop_class.Crop`
+
+A potato crop
+
+
+#### \__init__()
+Represents a potato crop
+
+Args:
+
+    Inherited from parent class Crop (growth_rate, light_need,
+    water_need)
+
+Attributes:
+
+    _type (str): the variety of the crop
+    Inherited from parent class Crop (_growth, _days_growing, _status)
+
+
+#### grow(light, water)
+A more sophisticated algorithm than the parent class’ method,
+responsible for actually growing the crop
+
+# wheat_class.py
+
+
+### class wheat_class.Wheat()
+Bases: `crop_class.Crop`
+
+A wheat crop
+
+
+#### \__init__()
+Represents a wheat crop
+
+Args:
+
+    Inherited from parent class Crop (growth_rate, light_need,
+    water_need)
+
+Attributes:
+
+    _type (str): the variety of the crop
+    Inherited from parent class Crop (_growth, _days_growing, _status)
+
+
+#### grow(light, water)
+Responsible for actually growing the crop
+
+# crops.py
+
+
+### crops.create_crop()
+Allows the user to choose which crop type they want to create and
+instantiate to then grow
+
+Returns:
+
+    new_crop (object): the instantiated class object
+
+
+### crops.display_menu()
+Shows the crop types that can be generated to the user
+
+### crops.select_option()
+Provides the user with the interface to input the crop type they want
+to create and instantiate to then grow
+
+Returns:
+
+    choice (int): the crop type the user wants to create
