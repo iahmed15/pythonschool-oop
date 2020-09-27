@@ -12,6 +12,7 @@
 
 * wheat_class module
 
+---
 
 - [pythonschool.net Crop Simulation](#pythonschoolnet-crop-simulation)
 - [crop_class.py](#crop-classpy)
@@ -38,6 +39,7 @@
     + [crops.display_menu()](#cropsdisplay-menu--)
     + [crops.select_option()](#cropsselect-option--)
 
+---
 
 # crop_class.py
 
