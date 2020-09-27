@@ -14,7 +14,7 @@
 
 ---
 
-## [pythonschool.net Crop Simulation](#pythonschoolnet-crop-simulation)
+## [Contents](#pythonschoolnet-crop-simulation)
 - [crop_class.py](#crop-classpy)
     + [class crop_class.Crop(growth_rate, light_need, water_need)](#class-crop-classcrop-growth-rate--light-need--water-need-)
       - [\__init__(growth_rate, light_need, water_need)](#---init---growth-rate--light-need--water-need-)
