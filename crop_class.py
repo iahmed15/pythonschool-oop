@@ -44,10 +44,14 @@ class Crop:
         """Provides an overview of the current state of the crop
 
         Returns:
-            A dictionary containing the type, status, growth and days growing
+            A multi-line string containing the type, status, growth and days growing
         """
-        return {'type': self._type, 'status': self._status,
-                'growth': self._growth, 'days_growing': self._days_growing}
+
+        return f"""Crop Type: {self._type}
+Status: {self._status}
+Growth: {self._growth}
+Days Growing: {self._days_growing}
+        """
 
     def _update_status(self):
         """Provides a way to change the status attribute to an appropriate value
@@ -105,7 +109,7 @@ def manual_grow(crop):
             if 1 <= light <= 10:
                 valid = True
             else:
-                print('Value entered not valid - pleas enter a value between 1'
+                print('Value entered not valid - please enter a value between 1'
                       + ' and 10')
         except ValueError:
             print("Value entered not valid - please enter a value between 1" +
@@ -118,7 +122,7 @@ def manual_grow(crop):
             if 1 <= water <= 10:
                 valid = True
             else:
-                print('Value entered not valid - pleas enter a value between 1'
+                print('Value entered not valid - please enter a value between 1'
                       + ' and 10')
         except ValueError:
             print("Value entered not valid - please enter a value between 1" +

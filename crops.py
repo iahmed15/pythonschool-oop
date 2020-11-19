@@ -2,7 +2,7 @@ from wheat_class import *
 from potato_class import *
 
 
-def display_menu():
+def display_crop_menu():
     """Shows the crop types that can be generated to the user"""
     
     print()
@@ -40,7 +40,7 @@ def create_crop():
 
     Returns:
         new_crop (object): the instantiated class object"""
-    display_menu()
+    display_crop_menu()
     choice = select_option()
     if choice == 1:
         new_crop = Potato()
