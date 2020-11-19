@@ -180,13 +180,3 @@ def manage_crop(crop):
             no_exit = False
             print()
     print("Thank you for using the crop management program")
-
-
-def main():
-    # Instantiate the class
-    new_crop = Crop(1,4,3)
-    manage_crop(new_crop)
-
-
-if __name__ == "__main__":
-    main()
